@@ -32,10 +32,11 @@ namespace DemoAutomation.PageObjects.CommonPages
             }
 
             Results_link(report).Click();
+            var stopwatch = Stopwatch.StartNew();
             do
             {
                 Button_button("Run Report").Click();
-            } while (!ResultsRows_label.ElementExists());
+            } while (!ResultsRows_label.ElementExists() && stopwatch.ElapsedMilliseconds < 30000);
         }
 
         public int GetNumberOfResults()
