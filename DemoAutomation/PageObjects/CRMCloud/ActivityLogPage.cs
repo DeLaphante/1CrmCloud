@@ -26,6 +26,7 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public void DeleteActivityItems(int numberOfItems)
         {
+            ActivityItems_checkbox.IsDisplayed();
             var activityItems = ActivityItems_checkbox.GetAllElements();
             int counter = 0;
             do
@@ -41,6 +42,7 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public List<string> GetAllActivityItems()
         {
+            ActivityItem_label().IsDisplayed();
             int count = ActivityItems_label.GetAllElements().Count;
             List<string> listOfItems = new List<string>();
             int counter = 1;
