@@ -8,7 +8,6 @@ namespace DemoAutomation.PageObjects.CommonPages
     public class Navigation
     {
         IWebDriver _Driver;
-        dynamic _windows;
         public Navigation(IWebDriver driver)
         {
             _Driver = driver;
