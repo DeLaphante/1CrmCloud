@@ -1,0 +1,162 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ChristianDeLaphante\\Documents\\GitLab\\qa-automation\\QA_Automation\\AutomationCore\\AutomationCore.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ChristianDeLaphante\\Documents\\GitLab\\qa-automation\\QA_Automation\\AutomationCore\\AutomationCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ChristianDeLaphante\\Documents\\GitLab\\qa-automation\\QA_Automation\\AutomationCore\\AutomationCore.csproj",
+        "projectName": "AutomationCore",
+        "projectPath": "C:\\Users\\ChristianDeLaphante\\Documents\\GitLab\\qa-automation\\QA_Automation\\AutomationCore\\AutomationCore.csproj",
+        "packagesPath": "C:\\Users\\ChristianDeLaphante\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ChristianDeLaphante\\Documents\\GitLab\\qa-automation\\QA_Automation\\AutomationCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ChristianDeLaphante\\Documents\\GitLab\\qa-automation\\QA_Automation\\NuGet.Config",
+          "C:\\Users\\ChristianDeLaphante\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "BoDi": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "DotNetSeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.31, )"
+            },
+            "Microsoft.Azure.Cosmos": {
+              "target": "Package",
+              "version": "[3.17.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.ML": {
+              "target": "Package",
+              "version": "[1.5.5, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.1, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            },
+            "MongoDB.Driver.Core": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.17.0, )"
+            },
+            "Nager.Date": {
+              "target": "Package",
+              "version": "[1.28.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "RazorEngine.NetCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Selenium.Support": {
+              "target": "Package",
+              "version": "[4.0.0-alpha07, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.0.0-alpha07, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[89.0.4389.2300, )"
+            },
+            "Selenium.WebDriver.GeckoDriver": {
+              "target": "Package",
+              "version": "[0.29.0, )"
+            },
+            "Selenium.WebDriver.MSEdgeDriver": {
+              "target": "Package",
+              "version": "[89.0.774.54, )"
+            },
+            "SpecFlow": {
+              "target": "Package",
+              "version": "[3.7.38, )"
+            },
+            "SpecFlow.NUnit": {
+              "target": "Package",
+              "version": "[3.7.38, )"
+            },
+            "SpecFlow.Tools.MsBuild.Generation": {
+              "target": "Package",
+              "version": "[3.7.38, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.13.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
