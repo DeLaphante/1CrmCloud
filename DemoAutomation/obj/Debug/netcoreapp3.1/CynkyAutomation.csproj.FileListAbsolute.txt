@@ -1,5 +1,0 @@
-C:\Users\Personal\Documents\Automation\CynkyAutomation\CynkyAutomation\obj\Debug\netcoreapp3.1\CynkyAutomation.csproj.AssemblyReference.cache
-C:\Users\Personal\Documents\Automation\CynkyAutomation\CynkyAutomation\obj\Debug\netcoreapp3.1\CynkyAutomation.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Personal\Documents\Automation\CynkyAutomation\CynkyAutomation\obj\Debug\netcoreapp3.1\CynkyAutomation.AssemblyInfoInputs.cache
-C:\Users\Personal\Documents\Automation\CynkyAutomation\CynkyAutomation\obj\Debug\netcoreapp3.1\CynkyAutomation.AssemblyInfo.cs
-C:\Users\Personal\Documents\Automation\CynkyAutomation\CynkyAutomation\obj\Debug\netcoreapp3.1\CynkyAutomation.csproj.CoreCompileInputs.cache
