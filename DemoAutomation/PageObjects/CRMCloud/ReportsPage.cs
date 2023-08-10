@@ -32,7 +32,10 @@ namespace DemoAutomation.PageObjects.CommonPages
             }
 
             Results_link(report).Click();
-            Button_button("Run Report").Click();
+            do
+            {
+                Button_button("Run Report").Click();
+            } while (!ResultsRows_label.ElementExists());
         }
 
         public int GetNumberOfResults()
