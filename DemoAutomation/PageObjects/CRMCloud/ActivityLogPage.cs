@@ -1,7 +1,6 @@
 ﻿using CynkyWrapper;
 using OpenQA.Selenium;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace DemoAutomation.PageObjects.CommonPages
 {
@@ -45,7 +44,6 @@ namespace DemoAutomation.PageObjects.CommonPages
             int count = ActivityItems_label.GetAllElements().Count;
             List<string> listOfItems = new List<string>();
             int counter = 1;
-            var stopwatch = Stopwatch.StartNew();
             do
             {
                 if (ActivityItem_label().IsDisplayed())
@@ -53,7 +51,7 @@ namespace DemoAutomation.PageObjects.CommonPages
                     listOfItems.Add(ActivityItem_label(counter).GetText());
                     counter++;
                 }
-            } while (counter < count && stopwatch.ElapsedMilliseconds < 10000);
+            } while (counter < count);
 
             return listOfItems;
         }
@@ -62,7 +60,6 @@ namespace DemoAutomation.PageObjects.CommonPages
         {
             List<string> listOfItems = new List<string>();
             int counter = 1;
-            var stopwatch = Stopwatch.StartNew();
             do
             {
                 if (ActivityItem_label().IsDisplayed())
@@ -70,7 +67,7 @@ namespace DemoAutomation.PageObjects.CommonPages
                     listOfItems.Add(ActivityItem_label(counter).GetText());
                     counter++;
                 }
-            } while (counter < numberOfItems && stopwatch.ElapsedMilliseconds < 10000);
+            } while (counter < numberOfItems);
             return listOfItems;
         }
 
