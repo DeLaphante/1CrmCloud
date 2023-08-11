@@ -25,14 +25,16 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public void SearchReport(string report)
         {
-            while (!Results_link(report).ElementExists())
+            var stopwatch = Stopwatch.StartNew();
+            while (!Results_link(report).ElementExists() && stopwatch.ElapsedMilliseconds < 30000)
             {
                 SearchFilter_textbox.Clear();
                 SearchFilter_textbox.SendKeysNoValidation(report + Keys.Enter);
             }
 
             Results_link(report).Click();
-            var stopwatch = Stopwatch.StartNew();
+
+            stopwatch.Restart();
             do
             {
                 Button_button("Run Report").Click();

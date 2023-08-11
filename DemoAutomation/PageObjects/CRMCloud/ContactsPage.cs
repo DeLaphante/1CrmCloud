@@ -1,6 +1,7 @@
 ﻿using CynkyWrapper;
 using DemoAutomation.Models.UI;
 using OpenQA.Selenium;
+using System.Diagnostics;
 
 namespace DemoAutomation.PageObjects.CommonPages
 {
@@ -33,10 +34,11 @@ namespace DemoAutomation.PageObjects.CommonPages
         public void CreateAContact(CreateContact createContact)
         {
             MenuOption_link("Create Contact").Click();
+            var stopwatch = Stopwatch.StartNew();
             do
             {
                 Title_dropdown.Click();
-            } while (!TitlePopup_dropdown.ElementExists());
+            } while (!TitlePopup_dropdown.ElementExists() && stopwatch.ElapsedMilliseconds < 30000);
             Option_dropdown(createContact.Title).Click();
             Contact_textbox("first_name").SendKeys(createContact.FirstName);
             Contact_textbox("last_name").SendKeys(createContact.LastName);

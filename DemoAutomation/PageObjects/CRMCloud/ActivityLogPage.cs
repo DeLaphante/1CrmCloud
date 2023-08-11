@@ -63,14 +63,14 @@ namespace DemoAutomation.PageObjects.CommonPages
             List<string> listOfItems = new List<string>();
             int counter = 1;
             var stopwatch = Stopwatch.StartNew();
-            while (counter <= numberOfItems && stopwatch.ElapsedMilliseconds < 10000)
+            do
             {
                 if (ActivityItem_label().IsDisplayed())
                 {
                     listOfItems.Add(ActivityItem_label(counter).GetText());
                     counter++;
                 }
-            }
+            } while (counter < numberOfItems && stopwatch.ElapsedMilliseconds < 10000);
             return listOfItems;
         }
 
