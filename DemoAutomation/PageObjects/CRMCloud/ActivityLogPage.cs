@@ -47,9 +47,9 @@ namespace DemoAutomation.PageObjects.CommonPages
             List<string> listOfItems = new List<string>();
             int counter = 1;
             var stopwatch = Stopwatch.StartNew();
-            while (counter <= count && stopwatch.ElapsedMilliseconds < 10000)
+            while (counter < count && stopwatch.ElapsedMilliseconds < 10000)
             {
-                if (ActivityItem_label(counter).IsDisplayed())
+                if (ActivityItem_label(1).IsDisplayed())
                 {
                     listOfItems.Add(ActivityItem_label(counter).GetText());
                     counter++;
@@ -66,7 +66,7 @@ namespace DemoAutomation.PageObjects.CommonPages
             var stopwatch = Stopwatch.StartNew();
             while (counter <= numberOfItems && stopwatch.ElapsedMilliseconds < 10000)
             {
-                if (ActivityItem_label(counter).IsDisplayed())
+                if (ActivityItem_label(1).IsDisplayed())
                 {
                     listOfItems.Add(ActivityItem_label(counter).GetText());
                     counter++;
