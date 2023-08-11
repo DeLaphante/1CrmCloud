@@ -42,19 +42,18 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public List<string> GetAllActivityItems()
         {
-            ActivityItem_label().IsDisplayed();
             int count = ActivityItems_label.GetAllElements().Count;
             List<string> listOfItems = new List<string>();
             int counter = 1;
             var stopwatch = Stopwatch.StartNew();
-            while (counter < count && stopwatch.ElapsedMilliseconds < 10000)
+            do
             {
-                if (ActivityItem_label(1).IsDisplayed())
+                if (ActivityItem_label().IsDisplayed())
                 {
                     listOfItems.Add(ActivityItem_label(counter).GetText());
                     counter++;
                 }
-            }
+            } while (counter < count && stopwatch.ElapsedMilliseconds < 10000);
 
             return listOfItems;
         }
@@ -66,7 +65,7 @@ namespace DemoAutomation.PageObjects.CommonPages
             var stopwatch = Stopwatch.StartNew();
             while (counter <= numberOfItems && stopwatch.ElapsedMilliseconds < 10000)
             {
-                if (ActivityItem_label(1).IsDisplayed())
+                if (ActivityItem_label().IsDisplayed())
                 {
                     listOfItems.Add(ActivityItem_label(counter).GetText());
                     counter++;
