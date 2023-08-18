@@ -15,6 +15,8 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         #region Locators
         PageElement MenuOption_link(string option) => new PageElement(_Driver, By.XPath($"//a[contains(.,'{option}')]"));
+        PageElement SystemMessages_label => new PageElement(_Driver, By.XPath("(//div[contains(@class, 'module-SystemMessages')])[2]"));
+        PageElement CloseMessageDialog_button => new PageElement(_Driver, By.XPath("(//div[contains(@class, 'dialog-close')])[2]"));
 
         #endregion
 
@@ -33,6 +35,9 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public void NavigateToMenuOption(string option)
         {
+            if (SystemMessages_label.ElementExists())
+                CloseMessageDialog_button.Click();
+
             switch (option.ToLower())
             {
                 case "contacts":
