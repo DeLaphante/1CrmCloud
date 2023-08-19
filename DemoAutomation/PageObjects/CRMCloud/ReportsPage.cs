@@ -7,17 +7,18 @@ namespace DemoAutomation.PageObjects.CommonPages
     public class ReportsPage
     {
         IWebDriver _Driver;
+
         public ReportsPage(IWebDriver driver)
         {
             _Driver = driver;
         }
 
         #region Locators
+
         PageElement SearchFilter_textbox => new PageElement(_Driver, By.Id("filter_text"));
         PageElement Results_link(string report) => new PageElement(_Driver, By.XPath($"//a[text()='{report}']"));
         PageElement Button_button(string option, int index = 1) => new PageElement(_Driver, By.XPath($"(//button[contains(.,'{option}')])[{index}]"));
         PageElement ResultsRows_label => new PageElement(_Driver, By.XPath($"//tbody/tr[contains(@class,'listViewRow')]"));
-
 
         #endregion
 

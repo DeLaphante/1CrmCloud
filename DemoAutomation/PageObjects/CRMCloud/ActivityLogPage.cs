@@ -7,6 +7,7 @@ namespace DemoAutomation.PageObjects.CommonPages
     public class ActivityLogPage : Navigation
     {
         IWebDriver _Driver;
+
         public ActivityLogPage(IWebDriver driver) : base(driver)
         {
             _Driver = driver;
@@ -32,7 +33,6 @@ namespace DemoAutomation.PageObjects.CommonPages
                 activityItems[counter].Click();
                 counter++;
             } while (counter < numberOfItems);
-
             Actions_button(2).Click();
             ActionsOption_dropdown("Delete").Click();
             ClickAlert();
@@ -45,7 +45,6 @@ namespace DemoAutomation.PageObjects.CommonPages
             int counter = 1;
             do
             {
-
                 listOfItems.Add(ActivityItem_label(counter).GetText());
                 counter++;
             } while (counter < count);

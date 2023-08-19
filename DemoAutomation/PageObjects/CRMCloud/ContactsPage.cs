@@ -8,12 +8,14 @@ namespace DemoAutomation.PageObjects.CommonPages
     public class ContactsPage
     {
         IWebDriver _Driver;
+
         public ContactsPage(IWebDriver driver)
         {
             _Driver = driver;
         }
 
         #region Locators
+
         PageElement MenuOption_link(string option) => new PageElement(_Driver, By.XPath($"//a[contains(.,'{option}')]"));
         PageElement Contact_textbox(string fieldName) => new PageElement(_Driver, By.XPath($"//input[@name='{fieldName}']"));
         PageElement Title_dropdown => new PageElement(_Driver, By.Id("DetailFormsalutation-input"));
@@ -25,7 +27,6 @@ namespace DemoAutomation.PageObjects.CommonPages
         PageElement Header_label(int index = 1) => new PageElement(_Driver, By.XPath($"(//h3)[{index}]"));
         PageElement Category_label => new PageElement(_Driver, By.XPath($"//li[contains(.,'Category')]"));
         PageElement BusinessRole_label => new PageElement(_Driver, By.XPath($"//p[text()='Business Role']//following-sibling::div"));
-
 
         #endregion
 

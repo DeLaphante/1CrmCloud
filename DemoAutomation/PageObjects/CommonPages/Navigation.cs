@@ -8,15 +8,18 @@ namespace DemoAutomation.PageObjects.CommonPages
     public class Navigation
     {
         IWebDriver _Driver;
+
         public Navigation(IWebDriver driver)
         {
             _Driver = driver;
         }
 
         #region Locators
+
         PageElement MenuOption_link(string option) => new PageElement(_Driver, By.XPath($"//a[contains(.,'{option}')]"));
         PageElement SystemMessages_label => new PageElement(_Driver, By.XPath("(//div[contains(@class, 'module-SystemMessages')])[2]"));
         PageElement CloseMessageDialog_button => new PageElement(_Driver, By.XPath("(//div[contains(@class, 'dialog-close')])[2]"));
+        PageElement CompanyLogo_image => new PageElement(_Driver, By.XPath("//div[@class='company-branding']"));
 
         #endregion
 
@@ -32,10 +35,9 @@ namespace DemoAutomation.PageObjects.CommonPages
             _Driver.SwitchTo().Alert().Accept();
         }
 
-
         public void NavigateToMenuOption(string option)
         {
-            if (SystemMessages_label.ElementExists())
+            if (CompanyLogo_image.IsDisplayed() && SystemMessages_label.ElementExists())
                 CloseMessageDialog_button.Click();
 
             switch (option.ToLower())
@@ -52,6 +54,7 @@ namespace DemoAutomation.PageObjects.CommonPages
             }
             MenuOption_link(option).Click();
         }
+
         #endregion
     }
 }
