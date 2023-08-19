@@ -1,6 +1,6 @@
 ﻿using CynkyWrapper;
 using OpenQA.Selenium;
-using System.Diagnostics;
+using System;
 
 namespace DemoAutomation.PageObjects.CommonPages
 {
@@ -26,31 +26,17 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public void SearchReport(string report)
         {
-            var stopwatch = Stopwatch.StartNew();
-            while (!Results_link(report).ElementExists() && stopwatch.ElapsedMilliseconds < 30000)
-            {
-                SearchFilter_textbox.Clear();
-                SearchFilter_textbox.SendKeysNoValidation(report + Keys.Enter);
-            }
-
+            SearchFilter_textbox.Clear();
+            SearchFilter_textbox.SendKeysNoValidation(report + Keys.Enter);
             Results_link(report).Click();
-
-            stopwatch.Restart();
-            do
-            {
-                Button_button("Run Report").Click();
-            } while (!ResultsRows_label.ElementExists() && stopwatch.ElapsedMilliseconds < 30000);
+            Button_button("Run Report").Click();
         }
 
         public int GetNumberOfResults()
         {
-            var stopwatch = Stopwatch.StartNew();
-            int count = 0;
-            do
-            {
-                count = ResultsRows_label.GetAllElements().Count;
-            } while (count.Equals(0) && stopwatch.ElapsedMilliseconds < 10000);
-            return count;
+            if (!ResultsRows_label.IsDisplayed())
+                throw new Exception("Reports results not displayed!");
+            return ResultsRows_label.GetAllElements().Count;
         }
 
         #endregion

@@ -39,7 +39,7 @@ namespace DemoAutomation.PageObjects.CommonPages
             do
             {
                 Title_dropdown.Click();
-            } while (!TitlePopup_dropdown.ElementExists() && stopwatch.ElapsedMilliseconds < 30000);
+            } while (!TitlePopup_dropdown.ElementExists() && stopwatch.ElapsedMilliseconds < 10000);
             Option_dropdown(createContact.Title).Click();
             Contact_textbox("first_name").SendKeys(createContact.FirstName);
             Contact_textbox("last_name").SendKeys(createContact.LastName);
