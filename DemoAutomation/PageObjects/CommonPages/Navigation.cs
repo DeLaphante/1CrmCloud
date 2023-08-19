@@ -25,7 +25,7 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         #region Actions
 
-        public void NavigateToLandingPage()
+        public void NavigateToHomePage()
         {
             _Driver.Navigate().GoToUrl(CynkyConfigManager.SiteUrl);
         }

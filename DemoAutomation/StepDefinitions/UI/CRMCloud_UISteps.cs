@@ -49,7 +49,7 @@ namespace DemoAutomation.StepDefinitions.UI
         {
             var createContact = new CreateContact();
             _ScenarioContext.Set<CreateContact>(createContact, "contact");
-            _ContactsPage.CreateAContact(createContact);
+            _ContactsPage.CreateContact(createContact);
         }
 
         [StepDefinition(@"created contact is successfully added")]
@@ -67,7 +67,7 @@ namespace DemoAutomation.StepDefinitions.UI
         [StepDefinition(@"user runs a '([^']*)' report")]
         public void WhenUserRunsAReport(string report)
         {
-            _ReportsPage.SearchReport(report);
+            _ReportsPage.RunReport(report);
         }
 
         [StepDefinition(@"some results are returned")]

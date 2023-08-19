@@ -1,9 +1,9 @@
 ﻿@CRMCloud
 Feature: CRMCloud_UI
 
-Background: Navigate to homepage
+Background: Navigate to login page
 	Given user is on the homepage
-	When user with the following details logs in:
+	And user with the following details logs in:
 		| Property | Value |
 		| Username | admin |
 		| Password | admin |

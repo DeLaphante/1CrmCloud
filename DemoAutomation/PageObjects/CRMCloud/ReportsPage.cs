@@ -24,7 +24,7 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         #region Actions
 
-        public void SearchReport(string report)
+        public void RunReport(string report)
         {
             SearchFilter_textbox.Clear();
             SearchFilter_textbox.SendKeysNoValidation(report + Keys.Enter);

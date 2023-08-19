@@ -17,7 +17,7 @@ namespace DemoAutomation.StepDefinitions.UI.Common
         [StepDefinition(@"user is on the homepage")]
         public void GivenUserNavigatesToTheHomePage()
         {
-            _Navigation.NavigateToLandingPage();
+            _Navigation.NavigateToHomePage();
         }
 
 

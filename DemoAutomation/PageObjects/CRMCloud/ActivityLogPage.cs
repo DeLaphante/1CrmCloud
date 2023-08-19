@@ -14,6 +14,7 @@ namespace DemoAutomation.PageObjects.CommonPages
         }
 
         #region Locators
+
         PageElement ActivityItems_checkbox => new PageElement(_Driver, By.XPath("//tbody/tr[contains(@class,'listViewRow')]//input"));
         PageElement ActivityItems_label => new PageElement(_Driver, By.XPath("//tr[contains(@class,'listViewRow')]//span[@class='detailLink'][1]//a"));
         PageElement ActivityItem_label(int index = 1) => new PageElement(_Driver, By.XPath($"((//tr[contains(@class,'listViewRow')])[{index}]//span[@class='detailLink']//a)[1]"));

@@ -32,7 +32,7 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         #region Actions
 
-        public void CreateAContact(CreateContact createContact)
+        public void CreateContact(CreateContact createContact)
         {
             MenuOption_link("Create Contact").Click();
             var stopwatch = Stopwatch.StartNew();
