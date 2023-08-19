@@ -76,7 +76,7 @@ namespace DemoAutomation.StepDefinitions.UI
             _ReportsPage.GetNumberOfResults().Should().BeGreaterThan(0);
         }
 
-        [StepDefinition(@"user deletes first (.*) items on table")]
+        [StepDefinition(@"user deletes first '(.*)' items on table")]
         public void WhenUserDeletesFirstItemsOnTable(int items)
         {
             _ScenarioContext.Set<List<string>>(_ActivityLogPage.GetActivityItems(items), "activityLogItems");

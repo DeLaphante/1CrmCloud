@@ -23,5 +23,5 @@ Scenario: Run report
 
 Scenario: Remove events from activity log
 	Given logged in user is on the 'Activity Log' page
-	When user deletes first 3 items on table
+	When user deletes first '3' items on table
 	Then the items should be removed

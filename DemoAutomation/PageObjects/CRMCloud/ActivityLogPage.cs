@@ -48,7 +48,6 @@ namespace DemoAutomation.PageObjects.CommonPages
                 listOfItems.Add(ActivityItem_label(counter).GetText());
                 counter++;
             } while (counter < count);
-
             return listOfItems;
         }
 
