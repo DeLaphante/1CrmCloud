@@ -25,7 +25,6 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public void DeleteActivityItems(int numberOfItems)
         {
-            ActivityItems_checkbox.IsDisplayed();
             var activityItems = ActivityItems_checkbox.GetAllElements();
             int counter = 0;
             do
@@ -46,11 +45,9 @@ namespace DemoAutomation.PageObjects.CommonPages
             int counter = 1;
             do
             {
-                if (ActivityItem_label().IsDisplayed())
-                {
-                    listOfItems.Add(ActivityItem_label(counter).GetText());
-                    counter++;
-                }
+
+                listOfItems.Add(ActivityItem_label(counter).GetText());
+                counter++;
             } while (counter < count);
 
             return listOfItems;
@@ -62,11 +59,8 @@ namespace DemoAutomation.PageObjects.CommonPages
             int counter = 1;
             do
             {
-                if (ActivityItem_label().IsDisplayed())
-                {
-                    listOfItems.Add(ActivityItem_label(counter).GetText());
-                    counter++;
-                }
+                listOfItems.Add(ActivityItem_label(counter).GetText());
+                counter++;
             } while (counter < numberOfItems);
             return listOfItems;
         }

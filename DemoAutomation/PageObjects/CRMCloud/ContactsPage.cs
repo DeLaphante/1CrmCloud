@@ -59,13 +59,11 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public string GetCategoryText()
         {
-            Category_label.IsDisplayed();
             return Category_label.GetText();
         }
 
         public string GetBusinessRoleText()
         {
-            BusinessRole_label.IsDisplayed();
             return BusinessRole_label.GetText();
         }
 
