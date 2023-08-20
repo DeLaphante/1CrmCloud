@@ -58,9 +58,6 @@
     <Reference Include="CynkyWrapper">
       <HintPath>CynkyWrapper.dll</HintPath>
     </Reference>
-    <Reference Include="Nager.Date">
-      <HintPath>Nager.Date.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>
