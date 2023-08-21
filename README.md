@@ -1,5 +1,5 @@
 # 1CrmCloud
-Demonstration of automating 1CrmCloud scenarios
+Demonstration of automating 1CrmCloud scenarios powered by [Ckyn](https://github.com/DeLaphante/CynkyAutomation)
 
 *** Running scenarios on Browserstack - Safari Ventura ***
 
