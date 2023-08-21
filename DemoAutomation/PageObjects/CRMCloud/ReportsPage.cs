@@ -1,6 +1,7 @@
 ﻿using CynkyWrapper;
 using OpenQA.Selenium;
 using System;
+using System.Diagnostics;
 
 namespace DemoAutomation.PageObjects.CommonPages
 {
@@ -29,13 +30,15 @@ namespace DemoAutomation.PageObjects.CommonPages
             SearchFilter_textbox.Clear();
             SearchFilter_textbox.SendKeysNoValidation(report + Keys.Enter);
             Results_link(report).Click();
-            Button_button("Run Report").Click();
+            var stopwatch = Stopwatch.StartNew();
+            do
+            {
+                Button_button("Run Report").Click();
+            } while (!ResultsRows_label.ElementExists() && stopwatch.ElapsedMilliseconds < 10000);
         }
 
         public int GetNumberOfResults()
         {
-            if (!ResultsRows_label.IsDisplayed())
-                throw new Exception("Reports results not displayed!");
             return ResultsRows_label.GetAllElements().Count;
         }
 
