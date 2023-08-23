@@ -5,7 +5,7 @@ using TechTalk.SpecFlow;
 namespace DemoAutomation.StepDefinitions.UI.Common
 {
     [Binding]
-    public sealed class Common_UISteps
+    public class Common_UISteps
     {
         Navigation _Navigation;
 

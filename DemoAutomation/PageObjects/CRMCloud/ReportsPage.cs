@@ -1,6 +1,5 @@
 ﻿using CynkyWrapper;
 using OpenQA.Selenium;
-using System;
 using System.Diagnostics;
 
 namespace DemoAutomation.PageObjects.CommonPages

@@ -1,4 +1,4 @@
-﻿Feature: CRMCloud_UI
+﻿Feature: 1CRMCloud_UI
 
 Background: Navigate to login page
 	Given user is on the homepage
