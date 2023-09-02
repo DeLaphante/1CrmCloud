@@ -1,5 +1,4 @@
-﻿using BoDi;
-using DemoAutomation.PageObjects.CommonPages;
+﻿using DemoAutomation.PageObjects.CommonPages;
 using TechTalk.SpecFlow;
 
 namespace DemoAutomation.StepDefinitions.UI.Common
@@ -9,9 +8,9 @@ namespace DemoAutomation.StepDefinitions.UI.Common
     {
         Navigation _Navigation;
 
-        public Common_UISteps(IObjectContainer objectContainer)
+        public Common_UISteps(ScenarioContext scenarioContext)
         {
-            _Navigation = objectContainer.Resolve<Navigation>();
+            _Navigation = scenarioContext.ScenarioContainer.Resolve<Navigation>();
         }
 
         [StepDefinition(@"user is on the homepage")]

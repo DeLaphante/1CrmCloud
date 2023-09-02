@@ -1,4 +1,3 @@
-using BoDi;
 using DemoAutomation.Models.UI;
 using DemoAutomation.PageObjects.CommonPages;
 using FluentAssertions;
@@ -19,14 +18,14 @@ namespace DemoAutomation.StepDefinitions.UI
         ActivityLogPage _ActivityLogPage;
         ScenarioContext _ScenarioContext;
 
-        public CRMCloud_UISteps(IObjectContainer objectContainer)
+        public CRMCloud_UISteps(ScenarioContext scenarioContext)
         {
-            _LoginPage = objectContainer.Resolve<LoginPage>();
-            _Navigation = objectContainer.Resolve<Navigation>();
-            _ContactsPage = objectContainer.Resolve<ContactsPage>();
-            _ReportsPage = objectContainer.Resolve<ReportsPage>();
-            _ActivityLogPage = objectContainer.Resolve<ActivityLogPage>();
-            _ScenarioContext = objectContainer.Resolve<ScenarioContext>();
+            _LoginPage = scenarioContext.ScenarioContainer.Resolve<LoginPage>();
+            _Navigation = scenarioContext.ScenarioContainer.Resolve<Navigation>();
+            _ContactsPage = scenarioContext.ScenarioContainer.Resolve<ContactsPage>();
+            _ReportsPage = scenarioContext.ScenarioContainer.Resolve<ReportsPage>();
+            _ActivityLogPage = scenarioContext.ScenarioContainer.Resolve<ActivityLogPage>();
+            _ScenarioContext = scenarioContext.ScenarioContainer.Resolve<ScenarioContext>();
         }
 
         [StepDefinition(@"user with the following details logs in:")]

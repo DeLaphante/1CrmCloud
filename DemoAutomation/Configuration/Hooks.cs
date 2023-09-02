@@ -1,5 +1,4 @@
-﻿using BoDi;
-using CynkyHook;
+﻿using CynkyHook;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Drawing;
 using TechTalk.SpecFlow;
@@ -24,9 +23,9 @@ namespace DemoAutomation.Configuration
         }
 
         [BeforeScenario]
-        void Launch(IObjectContainer objectContainer, FeatureContext featureContext, ScenarioContext scenarioContext)
+        void Launch(FeatureContext featureContext, ScenarioContext scenarioContext)
         {
-            _Config.Launch(objectContainer, featureContext, scenarioContext, ConfigManager.RS_User, ConfigManager.RS_Key, new Size());
+            _Config.Launch(featureContext, scenarioContext, ConfigManager.RS_User, ConfigManager.RS_Key, new Size());
         }
 
         [BeforeFeature]
