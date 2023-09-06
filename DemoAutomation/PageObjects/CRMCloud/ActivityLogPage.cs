@@ -28,12 +28,10 @@ namespace DemoAutomation.PageObjects.CommonPages
         public void DeleteActivityItems(int numberOfItems)
         {
             var activityItems = ActivityItems_checkbox.GetAllElements();
-            int counter = 0;
-            do
+            for (int counter = 0; counter < numberOfItems; counter++)
             {
                 activityItems[counter].Click();
-                counter++;
-            } while (counter < numberOfItems);
+            }
             Actions_button(2).Click();
             ActionsOption_dropdown("Delete").Click();
             ClickAlert();
@@ -43,24 +41,20 @@ namespace DemoAutomation.PageObjects.CommonPages
         {
             int count = ActivityItems_label.GetAllElements().Count;
             List<string> listOfItems = new List<string>();
-            int counter = 1;
-            do
+            for (int counter = 1; counter < count; counter++)
             {
                 listOfItems.Add(ActivityItem_label(counter).GetText());
-                counter++;
-            } while (counter < count);
+            }
             return listOfItems;
         }
 
         public List<string> GetActivityItems(int numberOfItems)
         {
             List<string> listOfItems = new List<string>();
-            int counter = 1;
-            do
+            for (int counter = 1; counter < numberOfItems; counter++)
             {
                 listOfItems.Add(ActivityItem_label(counter).GetText());
-                counter++;
-            } while (counter < numberOfItems);
+            }
             return listOfItems;
         }
 
