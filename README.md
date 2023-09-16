@@ -9,6 +9,8 @@ Demonstration of automating 1CrmCloud scenarios powered by [CynkyAutomation](htt
 
 - No Thread.Sleeps or implicit waits
 
+- No StaleElementReferenceException
+
 - No test retries 
 
 - Different challenges and hurdles
