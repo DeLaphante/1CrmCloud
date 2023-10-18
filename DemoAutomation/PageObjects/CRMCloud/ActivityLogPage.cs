@@ -16,8 +16,8 @@ namespace DemoAutomation.PageObjects.CommonPages
         #region Locators
 
         PageElement ActivityItems_checkbox => new PageElement(_Driver, By.XPath("//tbody/tr[contains(@class,'listViewRow')]//input"));
-        PageElement ActivityItems_label => new PageElement(_Driver, By.XPath("//tr[contains(@class,'listViewRow')]//span[@class='detailLink'][1]//a"));
-        PageElement ActivityItem_label(int index = 1) => new PageElement(_Driver, By.XPath($"((//tr[contains(@class,'listViewRow')])[{index}]//span[@class='detailLink']//a)[1]"));
+        PageElement ActivityItems_label => new PageElement(_Driver, By.XPath("(//tr[contains(@class,'listViewRow')])//span[@class='detailLink']//a"));
+        PageElement ActivityItem_label(int index = 1) => new PageElement(_Driver, By.XPath($"(((//tr[contains(@class,'listViewRow')])//span[@class='detailLink']//a)[{index}])[1]"));
         PageElement Actions_button(int index = 1) => new PageElement(_Driver, By.XPath($"(//span[normalize-space(text()) = 'Actions'])[{index}]"));
         PageElement ActionsOption_dropdown(string option) => new PageElement(_Driver, By.XPath($"//div[text()='{option}']"));
 
