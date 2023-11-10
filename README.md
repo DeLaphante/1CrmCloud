@@ -1,5 +1,5 @@
 # 1CrmCloud
-Demonstration of automating 1CrmCloud scenarios powered by [CynkyAutomation](https://github.com/DeLaphante/CynkyAutomation)
+Demonstration of automating 1CrmCloud UI scenarios powered by [CynkyAutomation](https://github.com/DeLaphante/CynkyAutomation)
 
 - Same C# Framework (CynkyAutomation)
 
