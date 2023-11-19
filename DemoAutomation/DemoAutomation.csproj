@@ -85,5 +85,96 @@
   <ItemGroup>
     <Content Remove="C:\Users\ChristianDeLaphante\.nuget\packages\mongodb.driver.core\2.12.0\build\../runtimes/win/native/snappy32.dll" />
     <Content Remove="C:\Users\Personal\.nuget\packages\microsoft.azure.cosmos\3.31.2\contentFiles\any\netstandard2.0\ThirdPartyNotice.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\UI\1CRMCloud_UI - Copy (10).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\UI\1CRMCloud_UI - Copy (2).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\UI\1CRMCloud_UI - Copy (3).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\UI\1CRMCloud_UI - Copy (4).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\UI\1CRMCloud_UI - Copy (5).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\UI\1CRMCloud_UI - Copy (6).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\UI\1CRMCloud_UI - Copy (7).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\UI\1CRMCloud_UI - Copy (8).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\UI\1CRMCloud_UI - Copy (9).feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\UI\1CRMCloud_UI - Copy %2810%29.feature.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Features\UI\1CRMCloud_UI - Copy %282%29.feature.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Features\UI\1CRMCloud_UI - Copy %283%29.feature.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Features\UI\1CRMCloud_UI - Copy %284%29.feature.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Features\UI\1CRMCloud_UI - Copy %285%29.feature.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Features\UI\1CRMCloud_UI - Copy %286%29.feature.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Features\UI\1CRMCloud_UI - Copy %287%29.feature.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Features\UI\1CRMCloud_UI - Copy %288%29.feature.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Features\UI\1CRMCloud_UI - Copy %289%29.feature.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Features\UI\1CRMCloud_UI - Copy.feature.cs">
+      <Visible>true</Visible>
+      <DependentUpon>%(Filename)</DependentUpon>
+      <DesignTime>true</DesignTime>
+      <AutoGen>true</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\UI\1CRMCloud_UI - Copy %2810%29.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\UI\1CRMCloud_UI - Copy %282%29.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\UI\1CRMCloud_UI - Copy %283%29.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\UI\1CRMCloud_UI - Copy %284%29.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\UI\1CRMCloud_UI - Copy %285%29.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\UI\1CRMCloud_UI - Copy %286%29.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\UI\1CRMCloud_UI - Copy %287%29.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\UI\1CRMCloud_UI - Copy %288%29.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\UI\1CRMCloud_UI - Copy %289%29.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\UI\1CRMCloud_UI - Copy.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
   </ItemGroup>  
 </Project>
