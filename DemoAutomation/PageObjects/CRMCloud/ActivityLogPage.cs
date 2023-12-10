@@ -1,6 +1,7 @@
 ﻿using CynkyWrapper;
 using OpenQA.Selenium;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DemoAutomation.PageObjects.CommonPages
 {
@@ -32,7 +33,12 @@ namespace DemoAutomation.PageObjects.CommonPages
             {
                 activityItems[counter].Click();
             }
-            Actions_button(2).Click();
+            var stopwatch = Stopwatch.StartNew();
+            do
+            {
+                Actions_button(2).Click();
+            }
+            while (!ActionsOption_dropdown("Delete").IsDisplayed() && stopwatch.ElapsedMilliseconds < 10000);
             ActionsOption_dropdown("Delete").Click();
             ClickAlert();
         }
