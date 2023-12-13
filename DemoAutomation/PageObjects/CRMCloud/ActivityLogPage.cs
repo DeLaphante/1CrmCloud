@@ -38,7 +38,7 @@ namespace DemoAutomation.PageObjects.CommonPages
             {
                 Actions_button(2).Click();
             }
-            while (!ActionsOption_dropdown("Delete").IsDisplayed() && stopwatch.ElapsedMilliseconds < 10000);
+            while (!ActionsOption_dropdown("Delete").IsDisplayed() && stopwatch.ElapsedMilliseconds < 30000);
             ActionsOption_dropdown("Delete").Click();
             ClickAlert();
         }
