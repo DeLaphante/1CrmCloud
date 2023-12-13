@@ -18,7 +18,7 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         PageElement MenuOption_link(string option) => new PageElement(_Driver, By.XPath($"//a[contains(.,'{option}')]"));
         PageElement Contact_textbox(string fieldName) => new PageElement(_Driver, By.XPath($"//input[@name='{fieldName}']"));
-        PageElement Title_dropdown => new PageElement(_Driver, By.Id("DetailFormsalutation-input"));
+        PageElement Title_dropdown => new PageElement(_Driver, By.XPath("(//div[contains(@id,'DetailFormsalutation-input')])[2]"));
         PageElement TitlePopup_dropdown => new PageElement(_Driver, By.Id("DetailFormsalutation-input-popup"));
         PageElement Category_dropdown => new PageElement(_Driver, By.Id("DetailFormcategories-input"));
         PageElement Role_dropdown => new PageElement(_Driver, By.Id("DetailFormbusiness_role-input-label"));
@@ -39,7 +39,7 @@ namespace DemoAutomation.PageObjects.CommonPages
             do
             {
                 Title_dropdown.Click();
-            } while (!TitlePopup_dropdown.IsDisplayed() && !Option_dropdown(createContact.Title).IsDisplayed() && stopwatch.ElapsedMilliseconds < 10000);
+            } while (!TitlePopup_dropdown.IsDisplayed() && !Option_dropdown(createContact.Title).IsDisplayed() && stopwatch.ElapsedMilliseconds < 30000);
             Option_dropdown(createContact.Title).Click();
             Contact_textbox("first_name").SendKeys(createContact.FirstName);
             Contact_textbox("last_name").SendKeys(createContact.LastName);
