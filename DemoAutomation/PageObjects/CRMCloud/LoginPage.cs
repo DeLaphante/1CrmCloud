@@ -1,4 +1,4 @@
-﻿using CynkyWrapper;
+﻿using CynkyDriver;
 using DemoAutomation.Models.UI;
 using OpenQA.Selenium;
 

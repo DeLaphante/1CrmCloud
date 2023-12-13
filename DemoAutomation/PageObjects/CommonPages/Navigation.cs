@@ -1,5 +1,5 @@
-﻿using CynkyWrapper;
-using CynkyWrapper.Configuration;
+﻿using CynkyDriver;
+using CynkyDriver.Configuration;
 using OpenQA.Selenium;
 using System;
 

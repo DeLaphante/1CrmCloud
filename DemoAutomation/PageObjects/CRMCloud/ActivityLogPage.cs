@@ -1,4 +1,4 @@
-﻿using CynkyWrapper;
+﻿using CynkyDriver;
 using OpenQA.Selenium;
 using System.Collections.Generic;
 using System.Diagnostics;

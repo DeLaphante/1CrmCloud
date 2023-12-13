@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cynky" Version="2.1.13" />
+    <PackageReference Include="Cynky" Version="2.2.0" />
     <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
     <PackageReference Include="FluentAssertions" Version="6.12.0" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.54" />
@@ -41,7 +41,7 @@
 
   <ItemGroup>
     <Reference Include="CynkyAnalysis">
-      <HintPath>..\..\..\..\..\..\source\repos\CynkyWrappers\CynkyHooks\CynkyAnalysis.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\source\repos\CynkyDrivers\CynkyHooks\CynkyAnalysis.dll</HintPath>
     </Reference>
     <Reference Include="CynkyHook">
       <HintPath>CynkyHook.dll</HintPath>
@@ -50,13 +50,13 @@
       <HintPath>CynkyHttp.dll</HintPath>
     </Reference>
     <Reference Include="CynkyReports">
-      <HintPath>..\..\..\..\..\..\source\repos\CynkyWrappers\CynkyHooks\CynkyReports.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\source\repos\CynkyDrivers\CynkyHooks\CynkyReports.dll</HintPath>
     </Reference>
     <Reference Include="CynkyUtilities">
       <HintPath>CynkyUtilities.dll</HintPath>
     </Reference>
-    <Reference Include="CynkyWrapper">
-      <HintPath>CynkyWrapper.dll</HintPath>
+    <Reference Include="CynkyDriver">
+      <HintPath>CynkyDriver.dll</HintPath>
     </Reference>
   </ItemGroup>
 
