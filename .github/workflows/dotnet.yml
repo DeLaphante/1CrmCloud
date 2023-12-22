@@ -29,4 +29,4 @@ jobs:
     - uses: actions/upload-artifact@v4
       with: 
         name: Reports
-        path: output/test/Reports
+        path: /Users/runner/work/1CrmCloud/1CrmCloud/DemoAutomation/bin/Debug/net8.0/Reports
