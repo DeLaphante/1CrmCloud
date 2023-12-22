@@ -1,6 +1,5 @@
 ﻿using CynkyHook;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Drawing;
 using TechTalk.SpecFlow;
 
 [assembly: Parallelize(Workers = 100, Scope = ExecutionScope.ClassLevel)]
