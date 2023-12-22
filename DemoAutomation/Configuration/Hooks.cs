@@ -25,7 +25,7 @@ namespace DemoAutomation.Configuration
         [BeforeScenario]
         void Launch(FeatureContext featureContext, ScenarioContext scenarioContext)
         {
-            _Config.Launch(featureContext, scenarioContext, ConfigManager.RS_User, ConfigManager.RS_Key, new Size());
+            _Config.Launch(featureContext, scenarioContext, ConfigManager.RS_User, ConfigManager.RS_Key);
         }
 
         [BeforeFeature]
