@@ -28,5 +28,5 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - uses: actions/download-artifact@v4
       with: 
-        name: test-report
-        path: output/test/reports
+        name: Reports
+        path: output/test/Reports
