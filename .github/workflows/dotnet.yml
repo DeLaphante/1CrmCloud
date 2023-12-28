@@ -4,8 +4,7 @@
 name: .NET
 
 on:
-  schedule: 
-    # Daily at 0:00 UTC
+  schedule:
     - cron:  '0 0 * * *'
   push:
     branches: [ "main" ]
