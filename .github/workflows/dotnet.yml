@@ -4,18 +4,17 @@
 name: .NET
 
 on:
+  schedule: 
+    # Daily at 0:00 UTC
+    - cron:  '0 0 * * *'
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  schedule: 
-    # Daily at 0:00 UTC
-    - cron:  '0 0 * * *'
+    
 jobs:
   Test:
-
     runs-on: macos-13
-
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
