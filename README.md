@@ -1,5 +1,5 @@
 # 1CrmCloud
-[![Tests](https://github.com/DeLaphante/1CrmCloud/actions/workflows/dotnet.yml/badge.svg?event=schedule)](https://github.com/DeLaphante/1CrmCloud/actions/workflows/dotnet.yml)
+[![Pipeline Tests](https://github.com/DeLaphante/1CrmCloud/actions/workflows/dotnet.yml/badge.svg?event=schedule)](https://github.com/DeLaphante/1CrmCloud/actions/workflows/dotnet.yml)
 
 Demonstration of automating 1CrmCloud UI scenarios powered by [CynkyAutomation](https://github.com/DeLaphante/CynkyAutomation)
 
