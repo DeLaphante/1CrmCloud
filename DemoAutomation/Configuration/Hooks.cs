@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 
-[assembly: Parallelize(Workers = 100, Scope = ExecutionScope.ClassLevel)]
+[assembly: Parallelize(Workers = 0, Scope = ExecutionScope.ClassLevel)]
 namespace DemoAutomation.Configuration
 {
     [Binding]
