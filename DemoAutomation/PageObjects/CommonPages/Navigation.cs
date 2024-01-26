@@ -27,7 +27,7 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public void NavigateToHomePage()
         {
-            _Driver.Navigate().GoToUrl(CynkyConfigManager.SiteUrl);
+            _Driver.Navigate().GoToUrl(CynkyConfigManager.BaseSiteUrl);
         }
 
         public void ClickAlert()
