@@ -13,12 +13,12 @@ on:
     
 jobs:
   Test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
-    - run: |
-       sudo apt update
-       sudo apt upgrade
-       sudo apt reinstall google-chrome-stable
+    - uses: browser-actions/setup-chrome@v1
+      with:
+         install-chromedriver: true
+         install-dependencies: true
     - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
@@ -34,4 +34,4 @@ jobs:
       if: always()
       with: 
         name: Reports
-        path: /home/runner/work/1CrmCloud/1CrmCloud/DemoAutomation/bin/Debug/net8.0/Reports
+        path: D:\a\1CrmCloud\1CrmCloud\DemoAutomation/bin/Debug/net8.0/Reports
