@@ -18,7 +18,7 @@ jobs:
     - run: |
        sudo apt update
        sudo apt upgrade
-       sudo apt --only-upgrade install google-chrome-stable
+       sudo apt reinstall google-chrome-stable
     - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
