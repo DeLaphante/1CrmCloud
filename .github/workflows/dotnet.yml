@@ -18,7 +18,7 @@ jobs:
     - run: |
        sudo apt update
        sudo apt upgrade
-       google-chrome-stable-version
+       sudo google-chrome-stable-version
        sudo apt --only-upgrade install google-chrome-stable
     - uses: actions/checkout@v4
     - name: Setup .NET
