@@ -4,6 +4,7 @@
 name: Pipeline Tests
 
 on:
+  workflow_dispatch:
   #schedule:
     #- cron:  '35 3 * * *'
   push:
