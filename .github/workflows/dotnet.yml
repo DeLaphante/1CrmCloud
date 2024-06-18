@@ -5,7 +5,7 @@ name: Pipeline Tests
 
 on:
   #schedule:
-   # - cron:  '35 3 * * *'
+    #- cron:  '35 3 * * *'
   push:
     branches: [ "main" ]
   pull_request:
