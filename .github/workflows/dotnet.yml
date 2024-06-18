@@ -4,8 +4,8 @@
 name: Pipeline Tests
 
 on:
-  #schedule:
-   # - cron:  '35 3 * * *'
+  schedule:
+    - cron:  '35 3 * * *'
   push:
     branches: [ "main" ]
   pull_request:
@@ -13,7 +13,7 @@ on:
     
 jobs:
   Test:
-    runs-on: windows-latest
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v4
     - name: Setup .NET
@@ -30,4 +30,4 @@ jobs:
       if: always()
       with: 
         name: Reports
-        path: D:\a\1CrmCloud\1CrmCloud\DemoAutomation/bin/Debug/net8.0/Reports
+        path: /Users/runner/work/1CrmCloud/1CrmCloud/DemoAutomation/bin/Debug/net8.0/Reports
