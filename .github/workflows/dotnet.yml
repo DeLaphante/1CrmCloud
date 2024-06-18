@@ -4,7 +4,6 @@
 name: Pipeline Tests
 
 on:
-  workflow_dispatch:
   #schedule:
     #- cron:  '35 3 * * *'
   push:
@@ -17,7 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-       sudo apt reinstall google-chrome-stable
+       sudo apt update
+       sudo apt upgrade
+       google-chrome-stable-version
+       sudo apt --only-upgrade install google-chrome-stable
     - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
