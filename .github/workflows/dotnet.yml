@@ -15,10 +15,8 @@ jobs:
   Test:
     runs-on: windows-latest
     steps:
-    - uses: browser-actions/setup-chrome@v1
-      with:
-       chrome-version: 126
-       install-chromedriver: true
+    - run: |
+        sudo apt reinstall google-chrome-stable
     - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
