@@ -30,15 +30,25 @@ jobs:
         key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.fsproj') }}
         restore-keys: |
           ${{ runner.os }}-nuget-
+          
+    - name: Cache .NET build output
+      uses: actions/cache@v4
+      with:
+        path: |
+            **/bin
+            **/obj
+        key: build-${{ runner.os }}-${{ hashFiles('**/*.csproj') }}
+        restore-keys: |
+            build-${{ runner.os }}-
 
     - name: Restore dependencies
       run: dotnet restore
 
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore --configuration Release
 
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal --configuration Release
 
     - uses: actions/upload-artifact@v4
       if: always()
