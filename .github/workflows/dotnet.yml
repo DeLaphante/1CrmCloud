@@ -45,8 +45,8 @@ jobs:
       run: dotnet restore --use-current-runtime
       
     - name: Check if build output is cached
-        id: build-cache-check
-        run: |
+      id: build-cache-check
+      run: |
           if [ -d "./home/runner/work/1CrmCloud/1CrmCloud/DemoAutomation/bin/Release" ]; then
             echo "Build output exists. Skipping build."
             echo "::set-output name=build::false"
