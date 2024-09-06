@@ -54,5 +54,5 @@ jobs:
       if: always()
       with: 
         name: Reports
-        path: /home/runner/work/1CrmCloud/1CrmCloud/DemoAutomation/bin/Debug/net8.0/Reports
+        path: /home/runner/work/1CrmCloud/1CrmCloud/DemoAutomation/bin/Release/net8.0/Reports
 
