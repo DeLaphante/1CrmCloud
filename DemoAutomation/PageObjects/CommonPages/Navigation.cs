@@ -19,6 +19,7 @@ namespace DemoAutomation.PageObjects.CommonPages
         PageElement MenuOption_link(string option) => new PageElement(_Driver, By.XPath($"//a[contains(.,'{option}')]"));
         PageElement SystemMessages_label => new PageElement(_Driver, By.XPath("(//div[contains(@class, 'module-SystemMessages')])[2]"));
         PageElement CloseMessageDialog_button => new PageElement(_Driver, By.XPath("(//div[contains(@class, 'dialog-close')])[2]"));
+        PageElement Dialog_label => new PageElement(_Driver, By.XPath("//div[contains(@id,'sysmsg') and contains(@class,'dialog')]"));
         PageElement CompanyLogo_image => new PageElement(_Driver, By.XPath("//div[@class='company-branding']"));
 
         #endregion
@@ -37,7 +38,7 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public void NavigateToMenuOption(string option)
         {
-            if (CloseMessageDialog_button.IsDisplayed() || CloseMessageDialog_button.IsDisplayed())
+            if (CloseMessageDialog_button.IsDisplayed() && Dialog_label.IsDisplayed())
                 CloseMessageDialog_button.Click();
 
             switch (option.ToLower())
