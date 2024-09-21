@@ -38,7 +38,7 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public void NavigateToMenuOption(string option)
         {
-            if (CloseMessageDialog_button.IsDisplayed() && Dialog_label.IsDisplayed())
+            if (Dialog_label.ElementExists() && CloseMessageDialog_button.IsDisplayed())
                 CloseMessageDialog_button.Click();
 
             switch (option.ToLower())
