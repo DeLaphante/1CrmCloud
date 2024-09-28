@@ -9,10 +9,7 @@ namespace DemoAutomation.PageObjects.CommonPages
     {
         IWebDriver _Driver;
 
-        public ActivityLogPage(IWebDriver driver) : base(driver)
-        {
-            _Driver = driver;
-        }
+        public ActivityLogPage(IWebDriver driver) : base(driver) { }
 
         #region Locators
 
