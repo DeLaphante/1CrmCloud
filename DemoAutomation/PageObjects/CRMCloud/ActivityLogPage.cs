@@ -7,8 +7,6 @@ namespace DemoAutomation.PageObjects.CommonPages
 {
     public class ActivityLogPage : Navigation
     {
-        IWebDriver _Driver;
-
         public ActivityLogPage(IWebDriver driver) : base(driver) { }
 
         #region Locators
