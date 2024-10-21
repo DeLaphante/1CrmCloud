@@ -35,11 +35,7 @@ namespace DemoAutomation.PageObjects.CommonPages
         public void CreateContact(CreateContact createContact)
         {
             MenuOption_link("Create Contact").Click();
-            var stopwatch = Stopwatch.StartNew();
-            do
-            {
-                Title_dropdown.Click();
-            } while (!TitlePopup_dropdown.IsDisplayed() && !Option_dropdown(createContact.Title).IsDisplayed() && stopwatch.ElapsedMilliseconds < 60000);
+            Title_dropdown.Click();
             Option_dropdown(createContact.Title).Click();
             Contact_textbox("first_name").SendKeys(createContact.FirstName);
             Contact_textbox("last_name").SendKeys(createContact.LastName);

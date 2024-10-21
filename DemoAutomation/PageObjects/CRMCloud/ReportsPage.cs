@@ -29,11 +29,7 @@ namespace DemoAutomation.PageObjects.CommonPages
             SearchFilter_textbox.Clear();
             SearchFilter_textbox.SendKeysNoValidation(report + Keys.Enter);
             Results_link(report).Click();
-            var stopwatch = Stopwatch.StartNew();
-            do
-            {
-                Button_button("Run Report").Click();
-            } while (!ResultsRows_label.ElementExists() && stopwatch.ElapsedMilliseconds < 10000);
+            Button_button("Run Report").Click();
         }
 
         public int GetNumberOfResults()

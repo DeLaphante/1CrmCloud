@@ -14,7 +14,7 @@ namespace DemoAutomation.PageObjects.CommonPages
         PageElement ActivityItems_checkbox => new PageElement(_Driver, By.XPath("//tbody/tr[contains(@class,'listViewRow')]//input"));
         PageElement ActivityItems_label => new PageElement(_Driver, By.XPath("(//tr[contains(@class,'listViewRow')])//span[@class='detailLink']//a"));
         PageElement ActivityItem_label(int index = 1) => new PageElement(_Driver, By.XPath($"(((//tr[contains(@class,'listViewRow')])//span[@class='detailLink']//a)[{index}])[1]"));
-        PageElement Actions_button(int index = 1) => new PageElement(_Driver, By.XPath($"(//span[normalize-space(text()) = 'Actions'])[{index}]"));
+        PageElement Actions_buttons => new PageElement(_Driver, By.XPath($"//span[normalize-space(text()) = 'Actions']"));
         PageElement ActionsOption_dropdown(string option) => new PageElement(_Driver, By.XPath($"//div[text()='{option}']"));
 
         #endregion
@@ -28,12 +28,11 @@ namespace DemoAutomation.PageObjects.CommonPages
             {
                 activityItems[counter].Click();
             }
-            var stopwatch = Stopwatch.StartNew();
-            do
+            foreach (var item in Actions_buttons.GetAllElements())
             {
-                Actions_button(2).Click();
+                if (item.IsDisplayed())
+                    item.Click();
             }
-            while (!ActionsOption_dropdown("Delete").IsDisplayed() && stopwatch.ElapsedMilliseconds < 60000);
             ActionsOption_dropdown("Delete").Click();
             ClickAlert();
         }
