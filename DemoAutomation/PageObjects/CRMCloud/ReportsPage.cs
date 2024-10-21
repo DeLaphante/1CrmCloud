@@ -1,6 +1,5 @@
 ﻿using CynkyDriver;
 using OpenQA.Selenium;
-using System.Diagnostics;
 
 namespace DemoAutomation.PageObjects.CommonPages
 {

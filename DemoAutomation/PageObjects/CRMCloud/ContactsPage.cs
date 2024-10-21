@@ -1,7 +1,6 @@
 ﻿using CynkyDriver;
 using DemoAutomation.Models.UI;
 using OpenQA.Selenium;
-using System.Diagnostics;
 
 namespace DemoAutomation.PageObjects.CommonPages
 {
