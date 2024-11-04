@@ -40,6 +40,7 @@ namespace DemoAutomation.PageObjects.CommonPages
             Contact_textbox("last_name").SendKeys(createContact.LastName);
             foreach (var category in createContact.Category)
             {
+                Category_dropdown.MoveToElement();
                 Category_dropdown.Click();
                 Option_dropdown(category).Click();
             }
