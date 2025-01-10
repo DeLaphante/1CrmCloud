@@ -30,7 +30,10 @@ namespace DemoAutomation.PageObjects.CommonPages
             foreach (var item in Actions_buttons.GetAllElements())
             {
                 if (item.IsDisplayed())
+                {
                     item.Click();
+                    break;
+                }
             }
             ActionsOption_dropdown("Delete").Click();
             ClickAlert();
