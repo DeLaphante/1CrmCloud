@@ -1,6 +1,6 @@
 ﻿using CynkyHook;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TechTalk.SpecFlow;
+using Reqnroll;
 
 [assembly: Parallelize(Workers = 0, Scope = ExecutionScope.ClassLevel)]
 namespace DemoAutomation.Configuration

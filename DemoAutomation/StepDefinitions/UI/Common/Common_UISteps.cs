@@ -1,5 +1,5 @@
 ﻿using DemoAutomation.PageObjects.CommonPages;
-using TechTalk.SpecFlow;
+using Reqnroll;
 
 namespace DemoAutomation.StepDefinitions.UI.Common
 {

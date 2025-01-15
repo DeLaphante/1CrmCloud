@@ -2,8 +2,8 @@ using DemoAutomation.Models.UI;
 using DemoAutomation.PageObjects.CommonPages;
 using FluentAssertions;
 using System.Collections.Generic;
-using TechTalk.SpecFlow;
-using TechTalk.SpecFlow.Assist;
+using Reqnroll;
+using Reqnroll.Assist;
 
 namespace DemoAutomation.StepDefinitions.UI
 {
