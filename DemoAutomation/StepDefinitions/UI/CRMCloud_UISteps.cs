@@ -1,9 +1,9 @@
 using DemoAutomation.Models.UI;
 using DemoAutomation.PageObjects.CommonPages;
 using FluentAssertions;
-using System.Collections.Generic;
 using Reqnroll;
 using Reqnroll.Assist;
+using System.Collections.Generic;
 
 namespace DemoAutomation.StepDefinitions.UI
 {
