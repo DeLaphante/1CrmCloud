@@ -17,9 +17,7 @@ namespace DemoAutomation.PageObjects.CommonPages
         #region Locators
 
         PageElement MenuOption_link(string option) => new PageElement(_Driver, By.XPath($"//a[contains(.,'{option}')]"));
-        PageElement SystemMessages_label => new PageElement(_Driver, By.XPath("//div[contains(@id,'sysmsg')]"));
         PageElement CloseMessageDialog_button => new PageElement(_Driver, By.XPath("//div[contains(@id,'sysmsg')]//div[contains(@class, 'dialog-close')]"));
-        PageElement CompanyLogo_image => new PageElement(_Driver, By.XPath("//div[@class='company-branding']"));
 
         #endregion
 
