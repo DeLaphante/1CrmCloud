@@ -41,11 +41,10 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public List<string> GetAllActivityItems()
         {
-            int count = ActivityItems_label.GetAllElements().Count;
             List<string> listOfItems = new List<string>();
-            for (int counter = 1; counter < count; counter++)
+            foreach (var item in ActivityItems_label.GetAllElements())
             {
-                listOfItems.Add(ActivityItem_label(counter).GetText());
+                listOfItems.Add(item.GetText());
             }
             return listOfItems;
         }
