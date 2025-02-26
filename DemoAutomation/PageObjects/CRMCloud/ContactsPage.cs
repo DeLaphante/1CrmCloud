@@ -1,6 +1,7 @@
 ﻿using CynkyDriver;
 using DemoAutomation.Models.UI;
 using OpenQA.Selenium;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DemoAutomation.PageObjects.CommonPages
 {
@@ -21,7 +22,7 @@ namespace DemoAutomation.PageObjects.CommonPages
         PageElement Category_dropdown => new PageElement(_Driver, By.Id("DetailFormcategories-input"));
         PageElement Role_dropdown => new PageElement(_Driver, By.Id("DetailFormbusiness_role-input-label"));
         PageElement Option_dropdown(string option) => new PageElement(_Driver, By.XPath($"//div[text()='{option}']"));
-        PageElement Button_button(string option, int index = 1) => new PageElement(_Driver, By.XPath($"(//*[(self::button or self::a or @onclick or @role='button')  and contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),\"{option.ToLower()}\") and not(contains(@class,'disable') or @disabled)])[{index}]"));
+        PageElement Button_button(string text, int index = 1) => new PageElement(_Driver, By.XPath($"(//*[(self::button or self::a or self::input or @onclick or @role='button')  and (contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),\"{text.ToLower()}\") or contains(@class,\"{text}\") or contains(@title,\"{text}\") or contains(@value,\"{text}\")) and not(contains(@class,'disable') or @disabled)])[{index}]"));
         PageElement Header_label(int index = 1) => new PageElement(_Driver, By.XPath($"(//h3)[{index}]"));
         PageElement Category_label => new PageElement(_Driver, By.XPath($"//li[contains(.,'Category')]"));
         PageElement BusinessRole_label => new PageElement(_Driver, By.XPath($"//p[text()='Business Role']//following-sibling::div"));
@@ -46,7 +47,6 @@ namespace DemoAutomation.PageObjects.CommonPages
             Option_dropdown(createContact.Role).Click();
             Button_button("Save", 3).Click();
         }
-
         public string GetContactHeaderText()
         {
             return Header_label(2).GetText();

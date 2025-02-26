@@ -1,5 +1,6 @@
 ﻿using CynkyDriver;
 using OpenQA.Selenium;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DemoAutomation.PageObjects.CommonPages
 {
@@ -16,7 +17,7 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         PageElement SearchFilter_textbox => new PageElement(_Driver, By.Id("filter_text"));
         PageElement Results_link(string report) => new PageElement(_Driver, By.XPath($"//a[text()='{report}']"));
-        PageElement Button_button(string option, int index = 1) => new PageElement(_Driver, By.XPath($"(//*[(self::button or self::a or @onclick or @role='button')  and contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),\"{option.ToLower()}\") and not(contains(@class,'disable') or @disabled)])[{index}]"));
+        PageElement Button_button(string text, int index = 1) => new PageElement(_Driver, By.XPath($"(//*[(self::button or self::a or self::input or @onclick or @role='button')  and (contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),\"{text.ToLower()}\") or contains(@class,\"{text}\") or contains(@title,\"{text}\") or contains(@value,\"{text}\")) and not(contains(@class,'disable') or @disabled)])[{index}]"));
         PageElement ResultsRows_label => new PageElement(_Driver, By.XPath($"//tbody/tr[contains(@class,'listViewRow')]"));
 
         #endregion
