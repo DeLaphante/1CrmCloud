@@ -1,6 +1,5 @@
 ﻿using CynkyDriver;
 using OpenQA.Selenium;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace DemoAutomation.PageObjects.CommonPages
 {
