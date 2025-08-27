@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cynky" Version="2.9.12" />
+    <PackageReference Include="Cynky" Version="2.9.13" />
     <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
     <PackageReference Include="FluentAssertions" Version="8.6.0" />
     <PackageReference Include="HtmlAgilityPack" Version="1.12.2" />
@@ -31,11 +31,11 @@
     <PackageReference Include="Microsoft.ML" Version="4.0.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageReference Include="MongoDB.Bson" Version="3.4.3" />
-    <PackageReference Include="MSTest.TestAdapter" Version="3.10.2" />
-    <PackageReference Include="MSTest.TestFramework" Version="3.10.2" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.10.3" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.10.3" />
     <PackageReference Include="RazorEngine.NetCore" Version="3.1.0" />
-    <PackageReference Include="Reqnroll" Version="2.4.1" />
-    <PackageReference Include="Reqnroll.MsTest" Version="2.4.1" />
+    <PackageReference Include="Reqnroll" Version="3.0.0" />
+    <PackageReference Include="Reqnroll.MsTest" Version="3.0.0" />
     <PackageReference Include="Selenium.Support" Version="4.35.0" />
     <PackageReference Include="Selenium.WebDriver" Version="4.35.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.8" />
