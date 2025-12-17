@@ -1,7 +1,6 @@
 ﻿using CynkyDriver;
 using DemoAutomation.Models.UI;
 using OpenQA.Selenium;
-using System.Threading;
 
 namespace DemoAutomation.PageObjects.CommonPages
 {
@@ -19,7 +18,7 @@ namespace DemoAutomation.PageObjects.CommonPages
         PageElement Username_textbox => new PageElement(_Driver, By.Id("login_user"));
         PageElement Password_textbox => new PageElement(_Driver, By.Id("login_pass"));
         PageElement Login_button => new PageElement(_Driver, By.Id("login_button"));
-        PageElement IamHumanShadowRoot_checkbox => new PageElement(_Driver, By.XPath("//*[@id='cap']"));
+        PageElement IamHumanShadowHost_checkbox => new PageElement(_Driver, By.XPath("//*[@id='cap']"));
 
         #endregion
 
@@ -29,8 +28,8 @@ namespace DemoAutomation.PageObjects.CommonPages
         {
             Username_textbox.SendKeys(loginUser.Username);
             Password_textbox.SendKeys(loginUser.Password);
-            IamHumanShadowRoot_checkbox.GetShadowRoot().GetShadowElement(By.CssSelector(".checkbox")).Click();
-            while (!IamHumanShadowRoot_checkbox.GetShadowRoot().GetShadowElement(By.CssSelector("[style='--progress: 100%;']")).IsDisplayed()) ;
+            IamHumanShadowHost_checkbox.GetShadowRoot().GetShadowElement(By.CssSelector(".checkbox")).Click();
+            while (!IamHumanShadowHost_checkbox.GetShadowRoot().GetShadowElement(By.CssSelector("[style='--progress: 100%;']")).IsDisplayed() && !IamHumanShadowHost_checkbox.GetShadowRoot().GetShadowElement(By.CssSelector("[part='label']")).GetText().Equals("You're a human")) ;
             Login_button.Click();
         }
 
