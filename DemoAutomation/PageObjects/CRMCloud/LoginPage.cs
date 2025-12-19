@@ -28,7 +28,7 @@ namespace DemoAutomation.PageObjects.CommonPages
         {
             Username_textbox.SendKeys(loginUser.Username);
             Password_textbox.SendKeys(loginUser.Password);
-            if (IamHumanShadowHost_checkbox.GetShadowRoot().ElementExists())
+            if (IamHumanShadowHost_checkbox.ElementExists())
             {
                 IamHumanShadowHost_checkbox.GetShadowRoot().GetShadowElement(By.CssSelector(".checkbox")).Click();
                 while (!IamHumanShadowHost_checkbox.GetShadowRoot().GetShadowElement(By.CssSelector("[style='--progress: 100%;']")).IsDisplayed() && !IamHumanShadowHost_checkbox.GetShadowRoot().GetShadowElement(By.CssSelector("[part='label']")).GetText().Equals("You're a human")) ;
