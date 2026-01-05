@@ -25,8 +25,8 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public void RunReport(string report)
         {
-            SearchFilter_textbox.Clear();
-            SearchFilter_textbox.SendKeys(report + Keys.Return);
+            SearchFilter_textbox.Click();
+            SearchFilter_textbox.SendKeys(report + Keys.Enter);
             Results_link(report).Click();
             Button_button("Run Report").Click();
         }
