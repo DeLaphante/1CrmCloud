@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cynky" Version="2.11.16" />
+    <PackageReference Include="Cynky" Version="2.11.18" />
     <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
     <PackageReference Include="FluentAssertions" Version="8.8.0" />
     <PackageReference Include="HtmlAgilityPack" Version="1.12.4" />
