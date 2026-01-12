@@ -31,7 +31,7 @@ namespace DemoAutomation.PageObjects.CommonPages
             if (IamHumanShadowHost_checkbox.ElementExists())
             {
                 IamHumanShadowHost_checkbox.GetShadowRoot().GetShadowElement(By.CssSelector(".checkbox")).Click();
-                while (!IamHumanShadowHost_checkbox.GetShadowRoot().GetShadowElement(By.CssSelector("[style='--progress: 100%;']")).IsDisplayed() && !IamHumanShadowHost_checkbox.GetShadowRoot().GetShadowElement(By.CssSelector("[part='label']")).GetText().Equals("You're a human")) ;
+                for (int i = 0; !IamHumanShadowHost_checkbox.GetShadowRoot().GetShadowElement(By.CssSelector("[style='--progress: 100%;']")).IsDisplayed() && !IamHumanShadowHost_checkbox.GetShadowRoot().GetShadowElement(By.CssSelector("[part='label']")).GetText().Equals("You're a human") && i < 3; i++) ;
             }
             Login_button.Click();
         }
