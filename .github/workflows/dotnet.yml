@@ -15,16 +15,16 @@ jobs:
   Test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: 10.0.x
     
     - name: Cache NuGet packages
       id: cache-nuget
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: ~/.nuget/packages
         key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '**/*.fsproj') }}
@@ -32,7 +32,7 @@ jobs:
           ${{ runner.os }}-nuget-
           
     - name: Cache .NET build output
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: |
             **/bin
@@ -60,7 +60,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal --configuration Release
 
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v5
       if: always()
       with: 
         name: Reports
