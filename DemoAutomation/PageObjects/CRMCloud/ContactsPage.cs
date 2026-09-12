@@ -23,7 +23,6 @@ namespace DemoAutomation.PageObjects.CommonPages
         PageElement Option_dropdown(string option) => new PageElement(_Driver, By.XPath($"//div[text()='{option}']"));
         PageElement Button_button(string text, int index = 1) => new PageElement(_Driver, By.XPath($"(//*[(self::button or self::a or self::input or @onclick or @role='button')  and (translate(normalize-space(string(.)),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz') = \"{text.ToLower()}\" or contains(@class,\"{text}\") or contains(@title,\"{text}\") or contains(@value,\"{text}\")) and not(contains(@class,'disable') or @disabled)])[{index}]"));
         PageElement Header_label(int index = 1) => new PageElement(_Driver, By.XPath($"(//h3)[{index}]"));
-        PageElement Category_label => new PageElement(_Driver, By.XPath($"//li[contains(.,'Category')]"));
         PageElement BusinessRole_label => new PageElement(_Driver, By.XPath($"//p[text()='Business Role']//following-sibling::div"));
 
         #endregion
@@ -54,7 +53,7 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         public string GetCategoryText()
         {
-            return Category_label.GetText();
+            return new PageElement(_Driver, By.XPath($"//li[contains(.,'Category')]")).GetText();
         }
 
         public string GetBusinessRoleText()
