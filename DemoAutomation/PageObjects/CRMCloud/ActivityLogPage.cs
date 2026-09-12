@@ -12,7 +12,6 @@ namespace DemoAutomation.PageObjects.CommonPages
 
         PageElement ActivityItems_checkbox => new PageElement(_Driver, By.XPath("//tbody/tr[contains(@class,'listViewRow')]//input"));
         PageElement ActivityItems_label => new PageElement(_Driver, By.XPath("(//tr[contains(@class,'listViewRow')])//span[@class='detailLink']//a"));
-        PageElement ActivityItem_label(int index = 1) => new PageElement(_Driver, By.XPath($"(((//tr[contains(@class,'listViewRow')])//span[@class='detailLink']//a)[{index}])[1]"));
         PageElement Actions_buttons => new PageElement(_Driver, By.XPath($"//span[normalize-space(text()) = 'Actions']"));
         PageElement ActionsOption_dropdown(string option) => new PageElement(_Driver, By.XPath($"//div[text()='{option}']"));
 
@@ -54,7 +53,7 @@ namespace DemoAutomation.PageObjects.CommonPages
             List<string> listOfItems = new List<string>();
             for (int counter = 1; counter < numberOfItems; counter++)
             {
-                listOfItems.Add(ActivityItem_label(counter).GetText());
+                listOfItems.Add(new PageElement(_Driver, By.XPath($"(((//tr[contains(@class,'listViewRow')])//span[@class='detailLink']//a)[{counter}])[1]")).GetText());
             }
             return listOfItems;
         }
